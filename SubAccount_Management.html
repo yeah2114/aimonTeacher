@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no" />
+		<meta name="format-detection" content="telephone=no">
+		<title>AIMON_school</title>
+		<link rel="shortcut icon" href="img/icons/AIMON.ico">
+		<link rel="icon" href="img/icons/AIMON.ico">
+		<link rel="stylesheet" href="css/common.css?ver=0.2"/>
+		<link rel="stylesheet" href="css/style.css?ver=0.2"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		
+		<!-- 막대그래프 -->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+		<!-- fullcalendar -->
+		<link href='css/main.css' rel='stylesheet'></link>
+		<script src='js/main.js'></script>
+
+		<script type="text/javascript" src="js/style.js"></script>
+	</head>
+<body>
+    <header>
+        <!--header top-->
+        <div class="headerTop cf">
+            <img src="img/logo.png" alt="로고" class="">
+            <div class="floatR pointer">
+                <img src="img/icons/icon_login.png" alt="아이콘_로그인" class="">
+                LOGOUT
+            </div>
+        </div>
+    
+        <!--sidebar. nav-->
+        <ul class="nav">
+            <li><a href="index.html" class="">Students Management</a></li>
+            <li><a href="SubAccount_Management.html">Sub Account</a></li>
+            <li><a href="MyAccount.html">My Account</a></li>
+        </ul>
+    </header>
+
+    <script>
+        $(document).ready(function(){
+            $("ul.nav li a").removeClass("on");
+            $("ul.nav li:nth-child(2) a").addClass("on");
+        });
+    </script>
+    
+    <section class="container">
+        <!----- title ----->
+        <p class="font_30 fontB black_txt">Sub Account Management</p>
+        <!----- content ----->
+        <article class="mt40">
+            <!----- btn ----->
+            <div class="rightT mb10 fontZero">
+                <a href="#" class="btn5 gray_btn2 mr10">Delete</a>
+                <a href="SubAccount_Management_Add.html" class="btn6 blue_btn">Add Account</a>
+            </div>
+    
+            <!----- 리스트 ----->
+            <table>
+                <colgroup>
+                    <col width="50px">
+                    <col width="163px">
+                    <col width="*">
+                    <col width="*">
+                    <col width="*">
+                    <col width="*">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>
+                            <form>
+                                <input type="checkbox" id="all">
+                                <label for="all"></label>
+                            </form>
+                        </th>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Students</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" id="chk1" name="all_chk">
+                                <label for="chk1"></label>
+                            </form>
+                        </td>
+                        <td>1</td>
+                        <td>Frank Smith</td>
+                        <td>student01@gmail.com</td>
+                        <td>23</td>
+                        <td>
+                            <button type="button" class="btn1 blue_btn" onclick="javascript:window.location.href='SubAccount_Management_Add.html'">View</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" id="chk2" name="all_chk">
+                                <label for="chk2"></label>
+                            </form>
+                        </td>
+                        <td>2</td>
+                        <td>Frank Smith</td>
+                        <td>student01@gmail.com</td>
+                        <td>23</td>
+                        <td>
+                            <button type="button" class="btn1 blue_btn" onclick="javascript:window.location.href='SubAccount_Management_Add.html'">View</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <!----- 테이블 관련 안내사항 ----->
+            <p>Showing 1 to 10 of 124 entries (filtered from 284 total entries)</p>
+    
+            <!----- pagination ----->
+            <div class="admin_pagination">
+                <a href="#">이전</a>
+                <a href="#" class="pagination_on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">다음</a>
+            </div>
+    
+        </article>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no" />
+		<meta name="format-detection" content="telephone=no">
+		<title>AIMON_school</title>
+		<link rel="shortcut icon" href="img/icons/AIMON.ico">
+		<link rel="icon" href="img/icons/AIMON.ico">
+		<link rel="stylesheet" href="css/common.css?ver=0.2"/>
+		<link rel="stylesheet" href="css/style.css?ver=0.2"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		
+		<!-- 막대그래프 -->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+		<!-- fullcalendar -->
+		<link href='css/main.css' rel='stylesheet'></link>
+		<script src='js/main.js'></script>
+
+		<script type="text/javascript" src="js/style.js"></script>
+	</head>
+<body>
+    <header>
+        <!--header top-->
+        <div class="headerTop cf">
+            <img src="img/logo.png" alt="로고" class="">
+            <div class="floatR pointer">
+                <img src="img/icons/icon_login.png" alt="아이콘_로그인" class="">
+                LOGOUT
+            </div>
+        </div>
+    
+        <!--sidebar. nav-->
+        <ul class="nav">
+            <li><a href="index.html" class="">Students Management</a></li>
+            <li><a href="SubAccount_Management.html">Sub Account</a></li>
+            <li><a href="MyAccount.html">My Account</a></li>
+        </ul>
+    </header>
+    
+    <section class="container">
+        <!----- title ----->
+        <div class="cf title_wrap">
+            <p class="font_25 fontB black_txt floatL mr20">Students Management</p>
+            <select class="floatL">
+                <option>Promotion Code</option>
+                <option>Promotion Code</option>
+                <option>Promotion Code</option>
+            </select>
+        </div>
+    
+        <!----- content ----->
+        <article class="student_manage_wrap">
+            <!----- top ----->
+            <div class="cf">
+                <!-- 왼쪽 -->
+                <div class="floatL fontZero">
+                    <span class="font_20 fontSB">Teacher</span>
+                    <select class="ml10 search_option">
+                        <option>Teacher Name</option>
+                        <option>Teacher Name</option>
+                        <option>Teacher Name</option>
+                    </select>
+                    <a href="#" class="btn6 blue_btn ml10">Search</a>
+                </div>
+                <!-- 오른쪽 -->
+                <div class="floatR fontZero">
+                    <a href="javascript:;" class="btn5 gray_btn2 mr10 teacher_open">Add Teacher</a>
+                    <a href="#" class="btn5 gray_btn2 mr10">Cancel Allocation</a>
+                    <a href="#" class="btn4 gray_btn2 mr10">Cancel Promotion Code</a>
+                    <a href="#" class="btn4 blue_btn">XLS All Download</a>
+                </div>
+            </div>
+    
+            <!----- bottom ----->
+            <table class="mt10">
+                <colgroup>
+                    <col width="50px">
+                    <col width="70px">
+                    <col width="*">
+                    <col width="*">
+                    <col width="*">
+                    <col width="*">
+                    <col width="*">
+                </colgroup>
+                <!-- thead -->
+                <thead>
+                    <tr>
+                        <th>
+                            <form>
+                                <input type="checkbox" id="all">
+                                <label for="all"></label>
+                            </form>
+                        </th>
+                        <th>No.</th>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Teacher</th>
+                        <th>Registered</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <!-- tbody -->
+                <tbody>
+                    <!-- 1 -->
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" id="chk1" name="all_chk">
+                                <label for="chk1"></label>
+                            </form>
+                        </td>
+                        <td>1</td>
+                        <td>Frank Smith</td>
+                        <td>student01@gmail.com</td>
+                        <td class="blue_txt3">Donald</td>
+                        <td>2021-07-20</td>
+                        <td class="fontZero">
+                            <button type="button" class="btn1 gray_btn2 mr10">XLS Download</button>
+                            <button type="button" class="btn1 blue_btn mr10">View</button>
+                            <button type="button" class="btn2 orange_btn2">Tips & QNA</button>
+                        </td>
+                    </tr>
+                    <!-- 2 -->
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="checkbox" id="chk2" name="all_chk">
+                                <label for="chk2"></label>
+                            </form>
+                        </td>
+                        <td>2</td>
+                        <td>Frank Smith</td>
+                        <td>student01@gmail.com</td>
+                        <td>
+                            <button type="button" class="btn3 blue_btn">Add</button>
+                        </td>
+                        <td>2021-07-20</td>
+                        <td class="fontZero">
+                            <button type="button" class="btn1 gray_btn2 mr10">XLS Download</button>
+                            <button type="button" class="btn1 blue_btn mr10">View</button>
+                            <button type="button" class="btn2 orange_btn2">Tips & QNA</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!----- 테이블 관련 안내사항 ----->
+            <p>Showing 1 to 10 of 124 entries (filtered from 284 total entries)</p>
+            <!----- pagination ----->
+            <div class="admin_pagination">
+                <a href="#">이전</a>
+                <a href="#" class="pagination_on">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">다음</a>
+            </div>
+        </article>
+    </section>
+
+    <!----- POPUP 1. 선생님 리스트 ----->
+<div class="popup_bg popup1 teacher_info">
+	<div class="popup_inner teacher_list">
+		<a href="#" class="floatR btn_x"><img src="img/icons/icon_x.png" alt="아이콘_x"></a>
+		<h1 class="font_18">Grace Teacher</h1>
+		<div class="mt30">
+			<p class="rightT mb10">2021-06-13 09 : 40</p>
+			<table style="padding: 0 20px; min-width: initial;">
+				<colgroup>
+					<col width="50">
+					<col width="300">
+					<col width="400">
+					<col width="200">
+					<col width="*">
+				</colgroup>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Teacher Name</th>
+						<th>Teacher ID</th>
+						<th>Students</th>
+						<th>Registered</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<input type="radio" id="radio1" name="radio">
+							<label for="radio1"></label>
+						</td>
+						<td>Teacher Donald</td>
+						<td>teacher1@gmail.com</td>
+						<td>10</td>
+						<td>2021-06-24</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="radio" id="radio2" name="radio">
+							<label for="radio2"></label>
+						</td>
+						<td>Teacher Donald</td>
+						<td>teacher1@gmail.com</td>
+						<td>10</td>
+						<td>2021-06-24</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="centerT mt40 fontZero">
+				<button type="button" class="btn8 gray_btn2 btn_cancel mr10">Cancel</button>
+				<button type="button" class="btn8 blue_btn btn_add">Add</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!----- POPUP 2. 선생님 선택안했을때 알림창 ----->
+<div class="popup_bg popup2 noSelect_alert">
+	<div class="popup_inner select_alert centerT">
+		<h1 class="font_20">Select Teahcer, please</h1>
+		<div class="mt30 fontZero">
+			<button type="button" class="btn8 gray_btn mr10 btn_no">No</button>
+			<button type="button" class="btn8 blue_btn btn_yes">Yes</button>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!----- POPUP 3. 선생님 선택했을때 확인창 ----->
+<div class="popup_bg popup2 select_confirm">
+	<div class="popup_inner select_alert centerT">
+		<h1 class="font_20">Would you like to choose a teacher?</h1>
+		<div class="mt30 fontZero">
+			<button type="button" class="btn8 gray_btn mr10 btn_no">No</button>
+			<button type="button" class="btn8 blue_btn btn_yes">Yes</button>
+		</div>
+	</div>
+</div>
+
+    
+    <script>
+        $(document).ready(function(){
+            $('popup').load('popup.html');
+            $("ul.nav li a").removeClass("on");
+            $("ul.nav li:nth-child(1) a").addClass("on");
+        });
+    </script>
+</body>
+</html>

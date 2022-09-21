@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no" />
+		<meta name="format-detection" content="telephone=no">
+		<title>AIMON_school</title>
+		<link rel="shortcut icon" href="img/icons/AIMON.ico">
+		<link rel="icon" href="img/icons/AIMON.ico">
+		<link rel="stylesheet" href="css/common.css?ver=0.2"/>
+		<link rel="stylesheet" href="css/style.css?ver=0.2"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		
+		<!-- 막대그래프 -->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+		<!-- fullcalendar -->
+		<link href='css/main.css' rel='stylesheet'></link>
+		<script src='js/main.js'></script>
+
+		<script type="text/javascript" src="js/style.js"></script>
+	</head>
+<body>
+    <header>
+        <!--header top-->
+        <div class="headerTop cf">
+            <img src="img/logo.png" alt="로고" class="">
+            <div class="floatR pointer">
+                <img src="img/icons/icon_login.png" alt="아이콘_로그인" class="">
+                LOGOUT
+            </div>
+        </div>
+    
+        <!--sidebar. nav-->
+        <ul class="nav">
+            <li><a href="index.html" class="">Students Management</a></li>
+            <li><a href="SubAccount_Management.html">Sub Account</a></li>
+            <li><a href="MyAccount.html">My Account</a></li>
+        </ul>
+    </header>
+    
+    <script>
+        $(document).ready(function(){
+            $("ul.nav li a").removeClass("on");
+            $("ul.nav li:nth-child(3) a").addClass("on");
+        });
+    </script>
+    
+    <section class="container">
+        <!----- title ----->
+        <p class="font_30 fontB black_txt">My Account</p>
+        <!----- content ----->
+        <article class="account_wrap">
+            <form>
+                <ul class="form_area cf">
+                    <li class="w100">
+                        <label for="schoolName">School</label>
+                        <input type="text" id="schoolName" value="Gunja High School" disabled class="no_bg">
+                    </li>
+                    <li class="w100">
+                        <label for="userName">Name</label>
+                        <input type="text" id="userName" class="double_input mr10" placeholder="First Name">
+                        <input type="text" id="userName" class="double_input" placeholder="Last Name">
+                    </li>
+                    <li class="w100">
+                        <label for="userID">ID</label>
+                        <input type="text" id="userID" value="gunja@naver.com" disabled class="no_bg">
+                    </li>
+                    <li class="w100">
+                        <label for="userPW">Password</label>
+                        <input type="password" id="userPW" placeholder="Password">
+                    </li>
+                </ul>
+            </form>
+            <div class="centerT mt40 fontZero">
+                <button type="button" class="btn8 gray_btn2 mr10">Cancel</button>
+                <button type="button" class="btn8 blue_btn mr10">Save</button>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
